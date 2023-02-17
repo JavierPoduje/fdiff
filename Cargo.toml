@@ -1,0 +1,8 @@
+[package]
+name = "diff"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = "4.1.6"
+git2 = "0.16.1"
