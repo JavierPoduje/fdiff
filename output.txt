@@ -1,0 +1,428 @@
+2023-02-10: Merge pull request #3340 from Foris/release/4.57.5_to_qa
+2023-02-10: DAR-2603 fix(assignments): import correctly
+2023-02-09: Merge pull request #3336 from Foris/release/4.57.3_to_qa
+2023-02-09: DAR-2583 fix(error in create new salas): change the property name of relantionship a building and json validator of update salas
+2023-02-09: EDH-1711 fix(update booking detail): parameter inclusion to separate the booking details update logic
+2023-02-08: Merge pull request #3331 from Foris/release/4.57.2_to_qa
+2023-02-08: DAR-2600 fix(banner): create child attrs correctly
+2023-02-02: Merge pull request #3329 from Foris/release/4.57.1_to_qa
+2023-02-02: DAR-2494 feature(remove tags in ssrattr endpoint): query change to ignore attributes and only add group labels
+2023-01-31: Merge pull request #3325 from Foris/release/2.37.2_to_qa
+2023-01-31: EDH-1746 fix(group manager): show parent groups in the search result when it has not subgroups
+2023-01-31: EDH-1741 fix(editors): redirect users correctly
+2023-01-31: EDH-1743 fix(groups manager): add new Graphql field for the group capacity type
+2023-01-31: EDH-1742 fix(student registry): solve problems with student_registry_tags erasing
+2023-01-31: EDH-1740 fix(groups manager): solve incorrect value in the subgroup capacities
+2023-01-25: Merge pull request #3315 from Foris/release/2.36.1_to_qa_v2
+2023-01-25: EDH-1733 fix(groups manager): filter by subject correctly on the main report
+2023-01-25: EDH-1738 feature(groups manager): add `state` column on enrollments report
+2023-01-25: EDH-1737 fix(groups manager): solve problems with logic to detect if a group is shared or not
+2023-01-25: EDH-1730 fix(group manager): show parent groups in the search result
+2023-01-23: Merge pull request #3305 from Foris/release/2.35.14_to_qa
+2023-01-23: EDH-1729 fix(rules engine): change the function name to call the capacities rule
+2023-01-23: Merge pull request #3303 from Foris/release/2.35.14_to_qa
+2023-01-23: EDH-1717 feature(graphql): add mutation to create subgroups
+2023-01-23: EDH-1727 fix(integration/banner): improve the subgroups import
+2023-01-19: Merge pull request #3300 from Foris/release/2.35.13_to_qa
+2023-01-19: EDH-1692 feature(integration/banner): create API to import subgroups massively
+2023-01-19: EDH-1709 feature(groups manager): add `change history` report
+2023-01-19: EDH-1703 feature(groups manager): add `isWaitingColumn` to groupEnrollment's students
+2023-01-19: EDH-1691 feature(rule engine): add a new rule engine to calculate the initial groups capacity
+2023-01-12: Merge pull request #3293 from Foris/release/2.35.12_to_qa
+2023-01-12: EDH-1707 feature(groups manager): filter non-numeric values in reports
+2023-01-09: Merge pull request #3291 from Foris/release/2.35.11_to_qa
+2023-01-09: DAR-2567 feature(rio_api): name of fields change
+2023-01-09: EDH-1686 feature(groups manager): order groups by Banner campus code
+2023-01-09: EDH-1700 feature(groups manager): support nested filtering
+2023-01-05: Merge pull request #3284 from Foris/release/4.54.3_to_qa
+2023-01-05: EDH-1697 feature(bookings): keep the ID when the booking is updated
+2023-01-05: DAR-2568 fix(import/groups): avoid group uuid duplication
+2022-12-30: Merge pull request #3282 from Foris/release/4.54.2_to_qa
+2022-12-30: DAR-2569 feature(rio_time_sessions): adding session_type
+2022-12-29: Merge pull request #3274 from Foris/release/4.54.1_to_qa
+2022-12-29: DAR-2562 feature(rio_shared_groups): adding keys to shared_groups
+2022-12-29: EDH-1695 fix(graphql): solve problem with booking and validation resolvers
+2022-12-29: DAR-2516 feature(reports): create integration report to USS
+2022-12-29: EDH-1577 fix(clashes validation error): rename the label of ability
+2022-12-29: DAR-2563 fix(rio_shared_groups): shared groups vacancies
+2022-12-29: DAR-2558 fix(import): add validation to detect duplications of availabilities
+2022-12-29: DAR-2535 fix(weeks): add the missing model 'TermPartWeek'
+2022-12-29: EDH-1606 feat(updated method in booking edition): creation method and change payload response in graphql
+2022-12-29: EDH-1677 feature(graphql): add crud support to classroom_bookings
+2022-12-28: hotfix: solve problem with duplicated column groups.is_active in dump.sql file
+2022-12-26: Merge pull request #3265 from Foris/release/4.54.0_to_qa
+2022-12-26: DAR-2517 feature(groups): create rendering to USS
+2022-12-22: Merge pull request #3260 from Foris/release/2.35.7_to_qa
+2022-12-22: EDH-1678 feature(calendar): display courseComponents' requirements
+2022-12-21: Merge pull request #3258 from Foris/release/4.53.4_to_qa
+2022-12-21: EDH-2539 fix(integration/rio): add support to execute the fake schedule in ue and ue-qa
+2022-12-21: DAR-2514 fix(reports with declined bookings): change the query of search booking to apply a filter for confirmed bookings
+2022-12-21: EDH-2540 fix(integration/sidi): avoid or decrease the probability of deadlocks in the group table
+2022-12-16: Merge pull request #3253 from Foris/release/2.25.6_to_qa
+2022-12-16: EDH-2539 fix(integration/rio): add support to execute the fake schedule in ue and ue-qa
+2022-12-16: EDH-1672 feature(package manager): add sopport to create populations"
+2022-12-15: DAR-2529 fix(error in import teacher availability): fix en json encoder of tags
+2022-12-14: Merge pull request #3248 from Foris/release/4.53.2_to_qa
+2022-12-14: DAR-2378 feature(report): create integration report to UTB
+2022-12-14: DAR-2500 feature(rio_api): online (fake) schedules for time_sessions and shared_groups
+2022-12-14: DAR-2512 feature(banner): modify ssbsect_sess_code field in API ssbsect
+2022-12-13: Merge pull request #3247 from Foris/release/2.35.5_to_qa
+2022-12-13: EDH-1669 feature(redirect): add auto-redirect to EDH
+2022-12-13: EDH-1668 feature(group manager): improve search times and other little fixes
+2022-12-13: chore(apache): increase the MaxRequestWorkers value to 1000
+2022-12-13: chore(apache): copy prefork.conf file
+2022-12-13: chore(apache): change prefork.conf content
+2022-12-12: Merge pull request #3241 from Foris/release/2.35.4_to_qa
+2022-12-12: EDH-1666 fix(group manager): solve problem saving the group visibility
+2022-12-12: hotfix: solve database performance problems in rules engine
+2022-12-12: Merge pull request #3237 from Foris/release/2.35.2_to_qa
+2022-12-12: EDH-1661 fix(rules engine): solve problem with the automatic execution of rule engine when a group is imported
+2022-12-12: EDH-1655 fix(groups manager): groups manager report
+2022-12-11: Merge pull request #3231 from Foris/release/2.35.1_to_qa
+2022-12-11: EDH-1645 fix(group manager): solve several problems with the group capacity indicated in the search result
+2022-12-11: EDH-1651 fix(groups manager): display groups' attrs correclty on reports
+2022-12-10: Merge pull request #3227 from Foris/release/2.34.1_to_qa_v3
+2022-12-10: EDH-1647 fix(group manager): show the group capacity correctly when the campus is NAL
+2022-12-10: Merge pull request #3225 from Foris/release/2.34.1_to_qa_v2
+2022-12-10: EDH-1642 fix(access code): solve problem with access code validation
+2022-12-10: Merge pull request #3223 from Foris/release/2.34.1_to_qa
+2022-12-10: EDH-1645 fix(rule engine): solve problem with some rules and add new logic for both ST and EG course type
+2022-12-09: Merge pull request #3219 from Foris/release/2.33.1_to_qa
+2022-12-09: EDH-1638 fix(group manager): solve several problems
+2022-12-09: EDH-1637 fix(groups manager): return subgroups correctly and extend reports
+2022-12-07: Merge pull request #3213 from Foris/release/4.53.1_to_qa
+2022-12-07: EDH-1578 fix(duplicate sessions in time grid): validate the duplicate registers in the collection of calendar sessions
+2022-12-07: DAR-2533 fix(import_operation): solve problem saving the error field in the import operation table
+2022-12-07: Merge pull request #3211 from Foris/release/2.32.7_to_qa_v2
+2022-12-07: EDH-1596 feature(groups manager): download groups' enrollments report
+2022-12-07: Merge pull request #3210 from Foris/release/2.32.7_to_qa
+2022-12-07: DAR-2531 fix(groups): fix to add CSH groups in case 1B and 4 from script tec_assign_virtual_groups
+2022-12-07: EDH-1626 fix(error session without time): change the method of validate if exists schedule events
+2022-12-07: EDH-1634 fix(group manager): resolve issues with access codes and dates in group detail
+2022-12-06: Merge pull request #3205 from Foris/release/2.32.6_to_qa
+2022-12-06: DAR-1630 feature(groups manager): improve group search, add logs and return all the external capacity values
+2022-12-05: Merge pull request #3202 from Foris/release/2.32.5_to_qa
+2022-12-05: EDH-1611 feature(users): add new column edh_access_code
+2022-12-02: Merge pull request #3200 from Foris/release/2.32.4_to_qa
+2022-12-02: EDH-1629 fix(group manager): solve problem with the additional filters
+2022-12-01: Merge pull request #3192 from Foris/release/2.32.3_to_qa
+2022-12-01: EDH-1572 feature(group manager): add additional filters
+2022-12-01: DAR-2519 feature(groups): adjust script tec_assign_virtual_groups TEC
+2022-11-30: Merge pull request #3189 from Foris/release/2.32.2_to_qa
+2022-11-30: EDH-1622 fix(graphql): solve problem with academic unit search
+2022-11-30: DAR-2524 feature(import_operations): courses_equivalences content_type
+2022-11-30: DAR-2523 fix(rio_api): fix on start_time and end_time for rio shared_packs
+2022-11-30: DAR-2501 feature(block on group creation): apply search for code patterns of EDH and Client
+2022-11-30: DAR-2520 fix(rio_api): renaming field on api time_sessions
+2022-11-30: EDH-1621 feature(group manager): add campus, program and enrollment date to the student enrollment
+2022-11-30: EDH-1620 fix(group manager): modify the query to return the group detail correctly
+2022-11-30: DAR-2525 fix(course): print_order field when importing via excel
+2022-11-30: DAR-2521 feature(hermes migration): update course_equivalences in Albus (via Hermes)
+2022-11-29: Merge pull request #3183 from Foris/release/2.32.1_to_qa
+2022-11-28: EDH-1539 feature(ability): add restriction to access group manager module
+2022-11-28: EDH-1595 feature(groups manager): add results report
+2022-11-28: EDH-1570 feature(graphql): create group_enrollment type and get it from Albus
+2022-11-28: EDH-1548 feature(graphql): add mutation to modify group capacity and visibility
+2022-11-28: EDH-1615 feature(graphql): add new type to show the pending group_change_requests
+2022-11-28: EDH-1604 feature(graphql): add type to return the group capacities by group
+2022-11-28: EDH-1612 fix(groups manager): filter gruops correctly
+2022-11-28: EDH-1605 feature(group capacities): add logic to recalculate rules and max_effective_capacity
+2022-11-28: EDH-1599 feature(rules_engine): add support to process rules and add the rule interpreter for the group_config_capacities
+2022-11-28: EDH-1601 feature(groups): add migration to create the new table group_capacities
+2022-11-28: DAR-2414 feature(groups): add `is_active` column
+2022-11-28: EDH-1581 feature(graphql): add new type to return the custom Urls
+2022-11-28: EDH-1547 feature(graphql): add new type to return the groups schedule details
+2022-11-28: EDH-1543 feature(graphql): add types for group search
+2022-11-28: EDH-1555 feature(graphql): add types to get campuses, departments, schools and subjects
+2022-11-28: EDH-1271 feature(graphql): add new type to display the session recommendations
+2022-11-28: EDH-1542 feature(db): add new tables 'academic_units', 'academic_unit_types' and 'academic_units_subjects'
+2022-11-22: Merge pull request #3169 from Foris/release/4.51.1_to_qa
+2022-11-22: DAR-2513 feature(integration banner): validate inactive groups
+2022-11-22: DAR-2440 feat(add column to actas): add in mantenedor a new column for datatable, import, export
+2022-11-22: DAR-2511 fix(export): solve problems with variable type when the data is exported
+2022-11-22: DAR-2499 fix(import/export): solve the detected problems
+2022-11-22: DAR-2449 fix(dump): add the tag column in several tables
+2022-11-22: DAR-2433 fix(exports): solve problems with filenames when creating a zip
+2022-11-22: DAR-2409 feature(export): improve times
+2022-11-22: DAR-2408 feature(import): improve import times
+2022-11-17: Merge pull request #3160 from Foris/release/4.51.0_to_qa_2
+2022-11-17: DAR-2510 fix(rio_api): fix on start_time and end_time for rio endpoints
+2022-11-17: DAR-2508 fix(groups): fix to repair error aasign groups number in TEC rendering
+2022-11-17: DAR-2414 feature(groups): add is_active column
+2022-11-10: Merge pull request #3154 from Foris/release/4.50.1_to_qa
+2022-11-10: DAR-2506 fix(menu): add item 'Horarios fijos' to the menu again
+2022-11-10: Merge pull request #3148 from Foris/release/4.48.5_to_qa
+2022-11-10: DAR-2498 fix(error session times report in tec): removing left join with process_origin_inputs table deprecated
+2022-11-10: DAR-2406 feature(rio_api): endpoints for time_sessions and shared_groups
+2022-11-10: DAR-2443 feature(maintainers for week groupers): generate the maintainers pages
+2022-11-10: DAR-2495 fix(reports): fix to generate unisabana integration report
+2022-11-08: Merge pull request #3139 from Foris/fix/DAR-2493_landing_page_styles
+2022-10-28: DAR-2493 fix(styles): landing page
+2022-10-27: Merge pull request #3135 from Foris/release/4.48.2_to_qa
+2022-10-27: DAR-2427 feature(rendering): adjust script tec_assign_virtual_groups and rendering TEC
+2022-10-27: EDH-1557 fix(packages): solve problems with the 'manual' indicator in report and creation duplication
+2022-10-27: DAR-2460 fix(mantainer filters): set overflow as visible
+2022-10-27: EDH-1375 feat(can skip clashes): change code for validity to can skip clashes
+2022-10-20: Merge pull request #3130 from Foris/release/4.48.1_to_qa
+2022-10-20: DAR-2466 fix(integration/report): integration report UP for new process
+2022-10-18: chore(users): allow change tokens massively
+2022-10-13: Merge pull request #3124 from Foris/release/4.48.0_to_qa
+2022-10-13: Fix/EDH-1523: first investigations of the problem
+2022-10-13: EDH-1376 feature(rendering): add assignation of teaching and payment
+2022-10-13: DAR-2454 fix(integration/banner): solve error importing SSRTEXT when the group is new
+2022-10-13: DAR-2379 fix(groups_api): add label field to groups api
+2022-10-13: EDH-1423 feature(reports): add-created packages in EDH to sections report
+2022-10-13: DAR-446 fix(instructors): display import errros correctly
+2022-10-13: EDH-1523 feature(classroom bookings): improve searching performance and fix orderable trait
+2022-10-05: Merge pull request #3115 from Foris/release/2.28.3_to_qa
+2022-10-05: EDH-2445 fix(integration/ssrtext) remove seqno reference and return the normal value of group_text
+2022-10-05: EDH-1527 feature(searchable): extend to search for fields of third tables
+2022-09-29: Merge pull request #3110 from Foris/hotfix/remove_swordfish
+2022-09-29: DAR-2359 fix(remove swordfish): remove swodfish validation
+2022-09-29: Revert "DAR-2359 fix(remove swordfish): remove swodfish validation"
+2022-09-29: Merge pull request #3106 from Foris/release/4.47.2_to_qa
+2022-09-29: Revert "Revert "DAR-2410 fix(integration/banner): solve problems with previous merge conflict resolution""
+2022-09-29: DAR-2441 fix(integration/SSRATTR): remove array keys in the data response
+2022-09-29: DAR-2430 fix(stripes): export correctly
+2022-09-29: EDH-1422 feature(packages): add types to create, edit and delete packages and package_links
+2022-09-29: DAR-2315 feature(forecasts): update academic records
+2022-09-29: DAR-2359 fix(remove swordfish): remove swodfish validation
+2022-09-29: EDH-1516 fix(change_header_docentes): add and hide columns in info head
+2022-09-29: DAR-2292 feature(banner): new endpoint with groups and schedules information
+2022-09-29: Revert "DAR-2410 fix(integration/banner): solve problems with previous merge conflict resolution"
+2022-09-23: Merge pull request #3099 from Foris/release/4.47.1_to_qa
+2022-09-23: DAR-2411 fix(reports): correct column name in poligran integration report
+2022-09-23: DAR-2384 fix(integration/ubosque): filter by enabled information on angel adm cdrom sudo dip plugdev lpadmin lxd sambashare and  endpoints
+2022-09-20: Merge pull request #3093 from Foris/release/4.47.0_to_qa
+2022-09-20: EDH-1518 fix(validations): filter available classrooms correctly
+2022-09-20: DAR-2383 fix(group_enrollments): remove duplicate registries
+2022-09-20: DAR-2190 fix(api_sigeca_multiples_salas): correccion de apis sigeca
+2022-09-01: Merge pull request #3078 from Foris/release/4.45.0_to_qa
+2022-09-01: EDH-1375 feat(can skip clashes): apply the ability validation of user having permission for skip clashes
+2022-09-01: EDH-1411 feature(sessionCrud): allow deletes support on the request
+2022-08-31: EDH-1513 feature(email): add booking ID and title in payload
+2022-08-31: DAR-2412 fix(report/tec): solve problems with query grouping
+2022-08-31: DAR-2411 feature(reports): poligran integration report
+2022-08-31: EDH-1431 feat(apply dynamic years): change the calculate events method in data loader and query for count hour asignated
+2022-08-31: EDH-1424 feat(add campus to dimensions of search): include campus in search for dimension sala, asignatura, liga, seccion
+2022-08-31: Feature/DAR-2386: add title column to report 'seciones am + reservas'
+2022-08-30: Merge pull request #3077 from Foris/release/2.24.4_to_qa
+2022-08-30: EDH-1507 fix(reservations): filter by text correctly
+2022-08-26: Merge pull request #3074 from Foris/release/4.44.3_to_qa
+2022-08-24: DAR-2402 fix(banner): repair error in unipiloto report banner
+2022-08-22: DAR-2410 fix(integration/banner): solve problems with previous merge conflict resolution
+2022-08-19: Merge pull request #3066 from Foris/release/4.44.2_to_qa
+2022-08-17: DAR-2256 fix(reporte up): reporte integración upanamericana
+2022-08-17: DAR-2385 fix(reports): add group by session.id in tec report
+2022-08-17: DAR-2375 feature(integration/banner): add pagination in all banner endpoints
+2022-08-17: EDH-1489 fix(integration/sidi): validate session creation correctly
+2022-08-08: Merge pull request #3057 from Foris/release/4.43.1_to_qa
+2022-08-05: DAR-2369 feature(rendering): add a view to confirm the rendering execution
+2022-08-05: EDH-1486 feature(email): build an object to send all the booking information in the payload
+2022-08-05: DAR-2363 feature(rendering_udp): Mejoras a rendering UDP
+2022-08-05: DAR-2297 feature(integration/banner): add 'SSRTEXT' in Banner static import
+2022-08-05: DAR-2312 feature(catalog): create new holiday view
+2022-08-05: EDH-1487 fix(sessions): solve problem displaying deleted instructiors and classrooms
+2022-08-05: DAR-2374 fix(imports): solve the problem displaying a wrong 'idx' in error validations
+2022-08-05: EDH-1428 fix(bookings): solve problem with filters in search
+2022-07-25: Merge pull request #3038 from Foris/release/2.24.0_to_qa
+2022-07-21: DAR-2376 fix(imports): handle instructors-teachings correctly
+2022-07-21: DAR-2278 feature(banner): modify api ssbsect filters to export only active groups
+2022-07-21: DAR-2278 feature(banner): modify api ssbsect filters to export only active groups
+2022-07-21: EDH-1437 fix(instructors/assignment): solve problem when instructor hasn't sessions
+2022-07-21: EDH-1431 feat(apply dynamic years): apply dynamic fields in query of Instructor Asignment
+2022-07-21: EDH-1125 fix(scenarios/process): add request to remove the productive state to the scenario
+2022-07-21: EDH-1427 fix(bookings/email): solve problem removing of bookings
+2022-07-21: EDH-1420 fix(edh/sessions): remove external validation for all clients
+2022-07-21: EDH-1415 fix(edh/validations): solve problem with building restriction
+2022-07-21: DAR-2277 feature(groups): add case 0 to script tec_assign_virtual_groups
+2022-07-21: EDH-1430 fix(edh/instructor): solve problem with count in 'total assigned blocks'
+2022-07-21: DAR-2341 feature(groups): adjust script tec_assign_virtual_groups
+2022-07-14: Merge pull request #3026 from Foris/release/2.23.1_to_qa
+2022-07-14: EDH-1429 feature(validations): consider online instructor's blocks
+2022-07-13: Merge pull request #3022 from Foris/release/4.42.1_to_qa
+2022-07-13: DAR-2364 fix(horarios reporte): download correctly
+2022-07-12: build(dockerfile): force version in requests dependency
+2022-07-12: Merge pull request #3015 from Foris/release/4.42.0_to_qa
+2022-07-11: feature(workflows): upload staging yaml
+2022-07-11: build(dockerfile): update deprecated commands
+2022-07-07: DAR-2337 fix(performance in edit assignment): resolve gulp conflict
+2022-07-07: DAR-2337 fix(performance in edit assignment): changing the way of loading the modal for cases without editing
+2022-07-07: DAR-2296 feature(report_session): create view with filters for report of sessions am
+2022-07-07: EDH-1426 feature(emails): add 'to' email in payload
+2022-07-07: EDH-1385 feature(bookings): add required rule to programs field
+2022-07-07: EDH-1391 feature(graphql): add composer.lock file
+2022-07-07: EDH-1391 feature(graphql): improve the JWT security in all endpoints
+2022-07-07: DAR-2360 fix(subjects): prevent duplication in course import
+2022-06-24: Merge pull request #3004 from Foris/release/4.41.2_to_qa
+2022-06-24: DAR-2358 fix(student_registry/tags): solve problem with wipe scope
+2022-06-23: Merge pull request #3002 from Foris/release/2.22.1_to_qa
+2022-06-23: EDH-1392 feature(bookings/mailing): add admins as email receiver
+2022-06-23: DAR-2328 feature(rendering): modify rendering TEC
+2022-06-23: DAR-2316 fix(terms): display errors correctly at `partial=true` imports
+2022-06-23: EDH-1395 feature(single edition): modify mutation
+2022-06-23: EDH-1371 fix(courses_filters): add validate for field active in courses filter to graphql
+2022-06-23: EDH-1389 fix(multi-edit): validate sessions correclty
+2022-06-23: EDH-1144 feature(processes): create process without algorithms execution
+2022-06-23: EDH-1097 feature(bookings): configure custom mailing notification for ueuropea
+2022-06-22: DAR-2348 fix(user access codes): set scenario correctly
+2022-06-14: Merge pull request #2992 from Foris/release/4.40.1_to_qa
+2022-06-13: DAR-2346 fix(GDR): solve problem with GDR access
+2022-06-13: Merge pull request #2989 from Foris/release/4.40.1_to_qa
+2022-06-13: DAR-2345 fix(context): solve the problem when the user changes scenario
+2022-06-09: Merge pull request #2981 from Foris/release/4.40.0_to_qa
+2022-06-08: EDH-1384 fix(session's crud): validate classroom's capacity correctly
+2022-06-08: DAR-2333 feature(views): add new darwin logo
+2022-06-08: DAR-2306 fix(process/assignation): improve when the process is changed to the productive state
+2022-06-08: EDH-1361 fix(subjects): create subject when this not exists in group or link creation
+2022-06-07: Merge pull request #2979 from Foris/release/4.39.3_to_qa
+2022-06-07: DAR-2335: fix(graphql/security): don't display "others" info on user's API and improve the security
+2022-06-03: Merge pull request #2971 from Foris/release/4.39.2_to_qa
+2022-06-03: DAR-2311 fix(dependencies): removed inused js dependency
+2022-06-03: DAR-2311 fix(scenario): solve problem with default scenario from API
+2022-06-02: Merge pull request #2969 from Foris/release/4.39.1_to_qa
+2022-06-02: DAR-2311 fix(scenarios): set default scenario from session and verify the user access code to do this
+2022-06-02: DAR-2272 feature(groups): assign and create new groups, sessions and classrooms to TEC groups
+2022-06-02: DAR-2311 feature(instructors): redirect to `profesors/availability` if needed
+2022-05-26: Merge pull request #2961 from Foris/release/4.39.0_and_2.20.1_to_qa
+2022-05-26: DAR-2298 fix(reports/tec): display correctly the instructor information
+2022-05-25: DAR-2303 fix(contexto): hotfix para empaquetamiento masivo sin considerar campo is_complete del paquete
+2022-05-25: EDH-1205 feature(sessions): allow multiple days on mutations
+2022-05-25: EDH-1360 feature(validations): add new sidi validations
+2022-05-25: DAR-1355 fix(reservations): show skipped sessions in classrooms search
+2022-05-25: DAR-2290 fix(instrictors/teachings): solve problem with row selection and form edit
+2022-05-25: DAR-2242 feature(rendering_udp): Rendering for UDP
+2022-05-16: Merge pull request #2954 from Foris/release/4.38.4_to_qa
+2022-05-16: DAR-2299 feature(course_components weeks): implement vue mantainer
+2022-05-16: DAR-2251 fix(reports): handle unique poblacions by course correctly
+2022-05-11: Merge pull request #2950 from Foris/release/4.38.3_to_qa
+2022-05-11: DAR-2293 fix(imports): solve problem with curriculums import
+2022-05-10: Merge pull request #2946 from Foris/release/4.38.2_to_qa
+2022-05-10: DAR-2276 fix(courses): solve problem with normal export
+2022-05-10: Merge pull request #2942 from Foris/release/4.38.0_to_qa
+2022-05-09: DAR-2274 feature(exports): update course's filtered export logic
+2022-05-09: DAR-2265 fix(hyaul): use lowercase workflow names
+2022-05-09: DAR-2261 feature(hyaul): use RabbitMQ in settings
+2022-05-09: EDH-1345 fix(reservation): solve problem with date order
+2022-05-09: EDH-1342 fix(groups): add default value in events count
+2022-05-09: DAR-2275 fix(course equivalences): add custom logic in code search for this import
+2022-05-09: DAR-2271 fix(validations): solve problem with error displaying
+2022-05-09: DAR-2259 feature(groups): enable usta rendering button and update groups labels
+2022-05-09: DAR-2238 fix(reporte banner upb): adding banner upb report
+2022-05-05: DAR-2273 hotfix(github-actions): solve problem with deprecated plugin
+2022-05-04: Merge pull request #2937 from Foris/release/4.37.3_to_qa
+2022-05-04: DAR-2246 fix(reporte_horario_fijos): error generando reporte de horarios fijos
+2022-05-02: Merge pull request #2934 from Foris/release/4.37.1_to_qa
+2022-05-02: DAR-2260 fix(reports/Tec): add classroom and instructor  group_by in query
+2022-05-02: DAR-2250 fix(api/schedules): change unique logic for classroom and instructors fields
+2022-05-02: DAR-2247 fix(imports): change logic in wipe scope
+2022-04-26: Merge pull request #2929 from Foris/release/4.36.1_to_qa
+2022-04-26: DAR-2221 hotfix(groups): exclude inactives recs in seccions table to rendering EAN
+2022-04-25: Merge pull request #2924 from Foris/release/4.36.0_to_qa
+2022-04-25: DAR-2221 feature(groups): add rendering to EAN
+2022-04-18: Merge pull request #2918 from Foris/release/2.18.2_to_qa
+2022-04-18: EDH-1341 feature(reservations): add filter by date
+2022-04-12: Merge pull request #2915 from Foris/release/4.35.0_to_qa
+2022-04-12: EDH-1339 fix(reservations): ignore reserved classrooms correctly
+2022-04-12: DAR-2244 fix(student_registries): disable student_registry_tags correctly
+2022-04-12: DAR-2240 feature(reports): build report integration to USTA
+2022-04-12: EDH-1339 fix(reservations): ignore busy classrooms in search correctly
+2022-04-12: DAR-2236 feature(schedules) : error in API Schedules to UBosque sections
+2022-04-12: EDH-1334 feature(reservation): custom blocks from json structure
+2022-04-12: EDH-1310 fix(reservations): compare correctly block hours
+2022-03-30: Merge pull request #2901 from Foris/release/4.34.5_to_qa
+2022-03-30: DAR-2234 fix(integration/banner): remove uuid pudate in groups creation
+2022-03-29: Merge pull request #2897 from Foris/release/4.34.4_to_qa
+2022-03-29: DAR-2233 fix(rendering): validate correctly the total groups
+2022-03-29: DAR-2232 fix(sigeca integration): display `docencia_simple` and `docencia_compartida` correctly
+2022-03-24: Merge pull request #2893 from Foris/release/4.34.3_to_qa
+2022-03-24: DAR-2165 feature(rendering): new view for tecmilenio
+2022-03-24: DAR-2228 feature(package sessions): set right package number and filter some groups
+2022-03-24: EDH-1322 feature(graphql) add new filter to classroom search
+2022-03-17: Merge pull request #2888 from Foris/release/4.34.2_to_qa
+2022-03-17: DAR-2219 fix(integration/tec): add new criteria to since/upto filters in API group_enrollment_student
+2022-03-10: Merge pull request #2885 from Foris/release/4.33.3_to_qa
+2022-03-09: DAR-2211 fix(scripting): sessions packaging
+2022-03-09: DAR-2186 feature(reports): add filters to sections report
+2022-03-09: DAR-2210 fix(sigeca): display `BTR_VALUE` correctly
+2022-03-09: DAR-2207 feature(ueuropea): display sections with multiple assignation report
+2022-03-09: DAR-2201 fix(horarios fijos): import
+2022-03-09: EDH-1312 integration(ssbsect): don't display groups with disabled courses
+2022-03-09: EDH-1299 fix(performance): improve load time for calendar view
+2022-03-09: DAR-2199 fix(reports): solve problem with xlsx format in splice reports
+2022-03-09: DAR-2200 fix(integration/sidi): remove hardcode group code
+2022-03-09: EDH-1298 fix(multi-edit): remove session's weeks correctly
+2022-03-01: Merge pull request #2871 from Foris/release/4.33.1_to_qa
+2022-02-28: DAR-2195 fix(packge_seccions): don't duplicate existing packages
+2022-02-28: DAR-2198 fix(sicuc integration): group enrollments
+2022-02-16: Merge pull request #2866 from Foris/release/4.32.14_to_qa
+2022-02-15: EDH-1284 feature(graphql): add orderable trait and apply on classroom_bookings
+2022-02-15: DAR-2181 fix(asignaciones): import records without schedules correctly
+2022-02-15: DAR-2112 feature(group_enrollments): fixed property "student_credits"
+2022-02-15: DAR-1953 feature(integration): add benner report for Iberoamericana
+2022-02-14: Merge pull request #2865 from Foris/release/4.32.13
+2022-02-14: DAR-2187 feature(student_registries): Error 500 index "student_id"
+2022-02-11: Merge pull request #2863 from Foris/release/2.14.3__to_qa
+2022-02-10: EDH-1218 fix(validations): classroom capacity
+2022-02-10: Merge pull request #2860 from Foris/release/2.14.2__to_qa
+2022-02-10: EDH-1297 fix(validations): classrooms capacity
+2022-02-07: Merge pull request #2851 from Foris/release/4.32.11_and_2.13.0_to_qa
+2022-02-04: fix: issue with migrations
+2022-02-03: Merge pull request #2848 from Foris/release/4.32.11_and_2.13.0_to_qa
+2022-02-03: EDH-1281 feature(validations): new validation for classrooms capacity
+2022-02-03: DAR-2185 feature(package_sessions): don't consider poblation's term
+2022-01-27: Merge pull request #2840 from Foris/release/2.12.2_to_qa
+2022-01-27: TEC GroupEnrollmentsStudents: add since and upto filters to main query
+2022-01-27: DAR-2183 fix(weeks): import weeks correctly
+2022-01-27: EDH-1247 fix(groups): remove client_code from group search
+2022-01-27: DAR-2168 fix(integration/sicuc): solve problem with incorrect indicated deleted groups
+2022-01-27: EDH-1278 feature(view/groups): add total of blocks with instructors
+2022-01-24: Merge pull request #2833 from Foris/release/2.12.0_to_qa
+2022-01-24: chore: add term_part_categories to dump
+2022-01-24: EDH-1253 feature(intervals): add `term_parts` to `intervals`
+2022-01-24: EDH-1255 feature(week_clusters): add `term_parts` table and graphql query
+2022-01-22: Merge pull request #2831 from Foris/release/4.32.9_to_qa
+2022-01-21: DAR-2171 feature(group_enrolment): order groups enrolments by enabled
+2022-01-20: Merge pull request #2825 from Foris/release/4.32.6_to_qa
+2022-01-20: DAR-2179 fix(integration/sicuc): add missing operation in all sicega queries
+2022-01-20: DAR-2173 feature(reports): add bookings to section report
+2022-01-20: DAR-2172 fix(reports): correction in tec report
+2022-01-20: EDH-1275 fix(groups/view): add compatibility with old group_texts
+2022-01-20: DAR-2011 feature(integration): add instructors splice report
+2022-01-20: EDH-1177 feature(texts): add support to add multi-texts
+2022-01-20: DAR-2010 feature(reports): classroom-clash report for Tec
+2022-01-20: EDH-1230 feature(integration/sidi): change logic in Tec rules
+2022-01-14: Merge pull request #2821 from Foris/release/4.32.7_to_qa
+2022-01-14: DAR-2177 fix(integration/sigeca): improve api queries
+2022-01-12: Merge pull request #2815 from Foris/release/4.32.5_and_2.10.1_to_qa
+2022-01-12: DAR-2170 fix(schedules): display correctly
+2022-01-12: EDH-1264 fix(views): blocks count from events
+2022-01-11: Merge pull request #2814 from Foris/release/4.32.4_to_qa
+2022-01-11: DAR-2171 feature(api/group_enrollment): group api by client_code
+2022-01-10: Merge pull request #2807 from Foris/release/4.32.2_to_qa
+2022-01-10: DAR-2166 fix(reports): solve problem in horly_quality generation
+2022-01-05: Merge pull request #2802 from Foris/release/4.32.1_to_qa
+2022-01-05: EDH-1227 fix(classroom_bookings): handle recurrence correctly
+2022-01-05: EDH-1238 fix(bookings): display `isRecurrent` correctly
+2022-01-05: EDH-1215 fix(bookings): display booking information correctly
+2022-01-05: EDH-1229 fix(integration): solve problem with interval validation
+2022-01-05: DAR-2111 feature(dump): missing table definition
+2022-01-05: EDH-1227 feature(reservations): add `is_recurrent` to `classroom_bookings`
+2022-01-05: DAR-2112 feature(api/group_enrollments): added index "student_credits"
+2022-01-05: DAR-2111 feature(api): new endpoint for course-equivalences integration
+2022-01-05: DAR-2057 fix(course_components): handle hash correctly
+2022-01-05: DAR-1942 feature(report): build classroom/levels report
+2022-01-05: feature(reports): changes in classroom/levels"
+2022-01-05: EDH-1246 fix(bundles): remove deleted instructors from bundles view
+2022-01-05: DAR-2113 feature(integration): Add `Secciones AM` report for UE
+2022-01-05: DAR-2157 feature(integration): display `btr_value` on sigeca's instructors api
+2021-12-28: Merge pull request #2790 from Foris/release/2.9.2_to_qa
+2021-12-27: EDH-1213 fix(bookings): validation with normal sessions
+2021-12-27: EDH-1213 fix(bookings): remove classroom-clash validation for rejected
+2021-12-27: Merge pull request #2787 from Foris/release/2.9.1_to_qa
+2021-12-27: EDH-1201 fix(instructors): display info for ueuropea correctly
+2021-12-27: EDH-1250 fix(instructors): handle blocks assignment correctly
+2021-12-23: Merge pull request #2784 from Foris/release/4.32.0_to_qa
+2021-12-23: DAR-2009 feature(reports/tec): add columns to schedules report
+2021-12-23: EDH-1221 feature(graphql): return total blocks in sections, links and groups endpoints
+2021-12-23: EDH-1223 feature(assignments): display more assignments for instructors

@@ -1,12 +1,10 @@
-// In the file src/main.rs
-
 mod args;
 
 use crate::args::get;
+use chrono::prelude::*;
 use git2::{Error, Repository};
 
 fn main() -> Result<(), Error> {
-    // Parse CLI arguments using Clap
     let matches = get();
 
     let repo_path = matches.get_one::<String>("REPO_PATH").unwrap();
@@ -22,12 +20,14 @@ fn main() -> Result<(), Error> {
         .id();
 
     let mut revwalk = repo.revwalk()?;
-    revwalk.hide(head2)?;
     revwalk.push(head1)?;
+    revwalk.hide(head2)?;
 
     for oid in revwalk {
         let commit = repo.find_commit(oid?)?;
-        println!("{}", commit.summary().unwrap());
+        let date = Local.timestamp_opt(commit.time().seconds(), 0);
+        let summary = commit.summary().unwrap();
+        println!("{}: {}", date.unwrap().format("%Y-%m-%d"), summary);
     }
 
     Ok(())
