@@ -1,4 +1,4 @@
-use chrono::prelude::*;
+use std::collections::HashSet;
 use std::error::Error;
 use std::path::PathBuf;
 use std::process::{Command, Output};
@@ -33,16 +33,6 @@ pub fn compare_branches(
         .trim()
         .to_string();
 
-    let git_log_output = Command::new("git")
-        .current_dir(&repo_path)
-        .args(&[
-            "log",
-            &format!("{}..{}", branch2, branch1),
-            "--pretty=format:%h|%ad|%s",
-            "--date=format:'%Y-%m-%d'",
-        ])
-        .output()?;
-
     let raw_branch1_output = get_branch_commits(&repo_path, branch1).unwrap();
     let raw_branch2_output = get_branch_commits(&repo_path, branch2).unwrap();
 
@@ -57,9 +47,39 @@ pub fn compare_branches(
         .filter_map(|msg| parse_commit_message(&msg, exclude.clone()))
         .collect();
 
-    println!("branch1_commits: {:?}", branch1_commits);
+    let commits = compare(branch1_commits, branch2_commits, exclude);
 
-    Ok(Vec::new())
+    Ok(commits)
+}
+
+fn compare(
+    commits1: Vec<Commit>,
+    commits2: Vec<Commit>,
+    exclude: Option<Vec<String>>,
+) -> Vec<Commit> {
+    let hash = commits2.iter().fold(HashSet::new(), |mut hash, commit| {
+        hash.insert(commit.summary.to_string());
+        hash
+    });
+
+    let word_to_exclude = if let Some(words) = exclude {
+        words
+    } else {
+        Vec::new()
+    };
+
+    let mut commits = Vec::new();
+
+    for commit in commits1 {
+        let contains_excluded_word = word_to_exclude
+            .iter()
+            .any(|word| commit.summary.contains(word));
+        if !hash.contains(&commit.summary) && !contains_excluded_word {
+            commits.push(commit);
+        }
+    }
+
+    commits
 }
 
 fn get_branch_commits(repo_path: &str, branch: &str) -> Result<Output, std::io::Error> {
