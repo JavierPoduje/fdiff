@@ -5,5 +5,5 @@ edition = "2021"
 
 [dependencies]
 chrono = "0.4.23"
-clap = "4.1.6"
 git2 = "0.16.1"
+structopt = "0.3.26"

@@ -1,34 +1,28 @@
-mod args;
+use std::process;
+use structopt::StructOpt;
 
-use crate::args::get;
-use chrono::prelude::*;
-use git2::{Error, Repository};
+mod cli;
+mod git;
 
-fn main() -> Result<(), Error> {
-    let matches = get();
+fn main() {
+    let args = cli::CliArgs::from_args();
 
-    let repo_path = matches.get_one::<String>("REPO_PATH").unwrap();
-    let branch1 = matches.get_one::<String>("BRANCH1").unwrap();
-    let branch2 = matches.get_one::<String>("BRANCH2").unwrap();
+    let branch1 = args.branch1;
+    let branch2 = args.branch2;
+    let exclude = args.exclude;
+    let repo = args.repo_path;
 
-    let repo = Repository::open(repo_path)?;
-    let head1 = repo
-        .revparse_single(&format!("refs/heads/{}", branch1))?
-        .id();
-    let head2 = repo
-        .revparse_single(&format!("refs/heads/{}", branch2))?
-        .id();
+    let result = git::compare_branches(&branch1, &branch2, exclude, repo);
 
-    let mut revwalk = repo.revwalk()?;
-    revwalk.push(head1)?;
-    revwalk.hide(head2)?;
-
-    for oid in revwalk {
-        let commit = repo.find_commit(oid?)?;
-        let date = Local.timestamp_opt(commit.time().seconds(), 0);
-        let summary = commit.summary().unwrap();
-        println!("{}: {}", date.unwrap().format("%Y-%m-%d"), summary);
+    match result {
+        Ok(commits) => {
+            for commit in commits {
+                println!("{}: {}", commit.date, commit.summary);
+            }
+        }
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            process::exit(1);
+        }
     }
-
-    Ok(())
 }
