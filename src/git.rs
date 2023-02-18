@@ -47,7 +47,7 @@ fn get_repo_path(repo_path: Option<PathBuf>) -> Result<String, Box<dyn Error>> {
     }
 
     let git_top_level_output = git_log_cmd
-        .args(&["rev-parse", "--show-toplevel"])
+        .args(["rev-parse", "--show-toplevel"])
         .output()?;
 
     if !git_top_level_output.status.success() {
@@ -88,10 +88,10 @@ fn compare(commits1: Vec<Commit>, commits2: Vec<Commit>) -> Vec<Commit> {
 
 fn get_branch_commits(repo_path: &str, branch: &str) -> Result<Output, std::io::Error> {
     Command::new("git")
-        .current_dir(&repo_path)
-        .args(&[
+        .current_dir(repo_path)
+        .args([
             "log",
-            &format!("{}", branch),
+            branch,
             "--pretty=format:%h|%ad|%s",
             "--date=format:%Y-%m-%d",
         ])
