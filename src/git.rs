@@ -5,8 +5,21 @@ use std::process::{Command, Output};
 
 #[derive(Debug)]
 pub struct Commit {
+    pub _id: String,
     pub date: String,
     pub summary: String,
+}
+
+impl Commit {
+    pub fn new(msg: String) -> Self {
+        let fields: Vec<&str> = msg.split('|').collect();
+        let _id = fields[0].to_string();
+
+        let summary = fields[2].to_string();
+        let date = fields[1].to_string();
+
+        Self { _id, date, summary }
+    }
 }
 
 pub fn compare_branches(
@@ -25,16 +38,11 @@ pub fn compare_branches(
 
     let raw_branch1_commits = parse_git_output(raw_branch1_output);
     let raw_branch2_commits = parse_git_output(raw_branch2_output);
-    let branch1_commits: Vec<Commit> = raw_branch1_commits
-        .into_iter()
-        .filter_map(|msg| parse_commit_message(&msg, words_to_exclude.clone()))
-        .collect();
-    let branch2_commits: Vec<Commit> = raw_branch2_commits
-        .into_iter()
-        .filter_map(|msg| parse_commit_message(&msg, words_to_exclude.clone()))
-        .collect();
 
-    let commits = exclude(compare(branch1_commits, branch2_commits), words_to_exclude);
+    let branch1_commits = raw_branch1_commits.into_iter().map(Commit::new).collect();
+    let branch2_commits = raw_branch2_commits.into_iter().map(Commit::new).collect();
+
+    let commits = exclude(subtract(branch1_commits, branch2_commits), words_to_exclude);
 
     Ok(commits)
 }
@@ -69,7 +77,7 @@ fn exclude(mut commits: Vec<Commit>, exclusions: Option<Vec<String>>) -> Vec<Com
     commits
 }
 
-fn compare(commits1: Vec<Commit>, commits2: Vec<Commit>) -> Vec<Commit> {
+fn subtract(commits1: Vec<Commit>, commits2: Vec<Commit>) -> Vec<Commit> {
     let hash = commits2.iter().fold(HashSet::new(), |mut hash, commit| {
         hash.insert(commit.summary.to_string());
         hash
@@ -100,25 +108,8 @@ fn get_branch_commits(repo_path: &str, branch: &str) -> Result<Output, std::io::
 
 fn parse_git_output(raw_commits: Output) -> Vec<String> {
     let git_log_output_str = String::from_utf8_lossy(&raw_commits.stdout);
-    let commit_messages = git_log_output_str
+    git_log_output_str
         .lines()
         .map(String::from)
-        .collect::<Vec<String>>();
-    commit_messages
-}
-
-fn parse_commit_message(msg: &str, exclude: Option<Vec<String>>) -> Option<Commit> {
-    let fields: Vec<&str> = msg.split('|').collect();
-    let _commit_id = fields[0];
-    let summary = fields[2].to_string();
-
-    if let Some(exclude) = exclude {
-        if exclude.iter().any(|word| summary.contains(word)) {
-            return None;
-        }
-    }
-
-    let date = fields[1].to_string();
-
-    Some(Commit { date, summary })
+        .collect::<Vec<String>>()
 }
