@@ -73,7 +73,13 @@ fn exclude(mut commits: Vec<Commit>, exclusions: Option<Vec<String>>) -> Vec<Com
     } else {
         HashSet::new()
     };
-    commits.retain(|commit| !to_exclude.contains(&commit.summary));
+
+    commits.retain(|commit| {
+        !to_exclude
+            .iter()
+            .any(|words_to_exclude| commit.summary.contains(words_to_exclude))
+    });
+
     commits
 }
 
